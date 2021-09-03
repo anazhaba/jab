@@ -1,0 +1,251 @@
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background: #ebf8ff;
+}
+.header {
+  font-size: 3vh;
+  height: max-content;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+.header-text {
+  color: black;
+}
+.up-icon {
+  position: fixed;
+}
+.up {
+  text-align: center;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 20px;
+  vertical-align: middle;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 10;
+}
+@media (max-width: 500px) {
+  .up {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .up {
+    padding-left: 5px;
+    padding-right: 20px;
+    margin: 0;
+  }
+}
+
+.link-header {
+  text-decoration: none;
+  color: rgb(18, 18, 18);
+}
+
+.wrapper {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 1%;
+  justify-content: center;
+  grid-template-columns: 0.01fr 1fr 1fr;
+  display: grid;
+  column-gap: 5vh;
+  grid-row-gap: 5vh;
+}
+
+@media screen and (max-width: 2000px) {
+  .wrapper {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    justify-content: center;
+    grid-template-columns: 0.01fr 1fr 1fr 1fr;
+    display: grid;
+    column-gap: 5vh;
+    grid-row-gap: 5vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+    justify-content: center;
+    grid-template-columns: 0.01fr 1fr 1fr;
+    display: grid;
+    column-gap: 3vh;
+    grid-row-gap: 3vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    display: grid;
+    column-gap: 2vh;
+    grid-row-gap: 2vh;
+  }
+}
+
+.block {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px, rgba(0, 0, 0, 0.08) 0px 2px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .block {
+    padding: 50px;
+  }
+}
+
+.nothing {
+  color: rgba(0, 0, 139, 0);
+  padding-bottom: 1%;
+}
+.li-link:hover svg {
+  color: #202020;
+}
+.li-link:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+svg {
+  transition: 0.2s;
+  color: #181818;
+  position: relative;
+  display: inline-block;
+}
+.frog-name {
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #181818;
+  font-weight: 300;
+  letter-spacing: 0.5vh;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 1%;
+}
+
+.dropdown {
+  margin: 0px 3px;
+  position: relative;
+}
+
+.dropdown {
+}
+
+.dropdown .dropdown_button {
+  cursor: pointer;
+  width: 100%;
+  height: fit-content;
+  display: inline-block;
+  transition: 1s;
+  font-weight: bold;
+  color: #717780;
+  text-decoration: none !important;
+}
+
+.dropdown input[type="checkbox"]:checked + .dropdown_button {
+  color: #717780;
+  background: none;
+}
+
+.dropdown input[type="checkbox"] + .dropdown_button .arrow {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+.dropdown input[type="checkbox"]:checked + .dropdown_button .arrow {
+  border-color: white transparent transparent transparent;
+}
+
+.dropdown .dropdown_content {
+  font-size: 100%;
+  color: #181818;
+  font-weight: 300;
+  letter-spacing: 0.3vh;
+  text-transform: uppercase;
+  z-index: 228;
+  text-align: left;
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.185) 0px 4px 12px,
+    rgba(0, 0, 0, 0.151) 0px 2px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1vh;
+  background: white;
+  margin: 0;
+  display: none;
+  width: 100%;
+}
+
+.dropdown .dropdown_content li {
+  list-style: none;
+}
+
+.dropdown .dropdown_content li:hover {
+  color: black;
+}
+
+.dropdown .dropdown_content li a {
+  display: block;
+  padding: 2px 7px;
+  padding-right: 15px;
+  color: black;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.dropdown .dropdown_content li:hover a {
+  text-decoration: none !important;
+}
+
+.dropdown input[type="checkbox"]:checked ~ .dropdown_content {
+  display: block;
+}
+
+.dropdown input[type="checkbox"] {
+  display: none;
+}
+.li-link {
+  transition: 0.2s;
+}
+.li-img {
+}
+
+.ul-text {
+  letter-spacing: 0.3vh;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+}
+.down-up-icon {
+  display: none;
+  height: 56px;
+  width: 56px;
+}
+@media (max-width: 500px) {
+  .down-up-icon {
+    display: initial;
+  }
+}
